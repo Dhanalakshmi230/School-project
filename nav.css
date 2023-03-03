@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+   
+}
+body{
+    font-family: 'Montserrat', sans-serif !important;
+    position: relative;
+    
+}
+.scrollspy-example{
+    overflow-y: scroll;
+}
+
+.text-dark{
+    margin-top: -3px;
+}
+.image{
+width:100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}

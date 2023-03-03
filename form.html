@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body onsubmit="table(id)">
+  <div class="container-fluid bg-dark">
+    <nav id="#examplescroll" class="navbar navbar-expand-lg navbar-lightz fixed-top p-4 famill bg-dark">
+      
+        <a class="navbar-brand fw-bold text-light text-white fs-5" href="http://127.0.0.1:5500/home.html" id="home">Home</a>
+        <button class="navbar-toggler text-white sec" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto ad">
+                <div class="dropdown">
+                    <button type="button" class="btn btn-dark dropdown-toggle fs-5 fw-bold" data-bs-toggle="dropdown">
+                        Student
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="http://127.0.0.1:5500/form.html">Student form</a></li>
+                        <li><a class="dropdown-item"  href="http://127.0.0.1:5500/slist.html">Student list</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class=" btn btn-dark dropdown-toggle fs-5 fw-bold" data-bs-toggle="dropdown">
+                    Teacher
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item"  href="http://127.0.0.1:5500/form1.html">Teacher form</a></li>
+                    <li><a class="dropdown-item"  href="http://127.0.0.1:5500/tlist.html">Teacher list</a></li>
+
+                </ul>
+            </div>
+
+            <a class="nav-link text-white fw-bold mx-3 fs-5" href="http://127.0.0.1:5500/login.html"><span class="hvr">Logout</span></a>
+        </div>
+
+    </div>
+</nav>
+</div><br><br><br><br>
+  <div class="container text-white" style="width:700px">
+    <div class="col-md-12"><br><br>
+      <h1 class="text-center">Student Form</h1>
+      <div id="successmessage">All Fields successfully filled</div>
+      <div class="wrapper">
+        <form>
+          <div class="form-group">
+            <label for="Firstname" class="control-label"></label>
+            <input type="hidden" id="id" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="Firstname" class="control-label">Name</label>
+            <input type="text" id="Name" class="form-control" placeholder="">
+            <p id="error1" style="color:red;"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="fathername" class="control-label">Father Name</label>
+            <input type="text" id="Fathername" class="form-control" placeholder="">
+            <p id="error2" style="color:red;"></p>
+          </div>
+
+
+          <div class="form-group">
+            <label for="email" class="control-label">Email</label>
+            <input type="text" id="Email" class="form-control" placeholder="e.g name@mail.com">
+            <p id="error3" style="color:red;"></p>
+          </div>
+          <div class="form-group">
+            <div class="pb-5 d-block p-2 w-100">
+              <label for="">Dateofbirth :</label>
+              <input class="wid" type="date" id="Dateofbirth">
+              <p id="error4" style="color:red;"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="control-label">Address</label>
+            <input type="text" id="Address" class="form-control" placeholder="">
+            <p id="error5" style="color:red;"></p>
+          </div>
+
+
+          <div class="form-group">
+            <div class="pb-2 d-block p-2 w-100" id="gend">
+              <label for="">Gender : </label>
+              <input type="radio" name="gender" value="Male"> Male
+
+              <input type="radio" name="gender" value="Female"> Female
+              <p id="error6" style="color:red;"></p>
+
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="control-label">Phone</label>
+            <input type="text" id="Phonenumber" class="form-control" placeholder="e.g 58445454">
+            <p id="error7" style="color:red;"></p>
+          </div>
+
+          <div class="form-group">
+            <button type="button" id="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="w-100 text-light bg-dark">
+    <table class="table text-light w-100">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>FatherName</th>
+          <th>Email</th>
+          <th>Dateofbirth</th>
+          <th>Gender</th>
+          <th>phoneNumber</th>
+          <th>Address</th>
+          <th>Action</th>
+          <th>Edit</th>
+               <th>Delete</th> 
+        </tr>
+      </thead>
+      <tbody id="mytable"></tbody>
+    </table>
+  </div> -->
+  <script src="form.js"></script>
+</body>
+
+</html>
